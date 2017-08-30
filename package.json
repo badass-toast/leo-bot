@@ -1,0 +1,28 @@
+{
+  "name": "movie-bot",
+  "version": "1.0.0",
+  "description": "A movie bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node horse-bot.js",
+    "deploy": "now -e Client_ID=@id -e Client_Secret=@secret -e Verification_Token=@token -e PORT=@port && now alias && now rm horse-bot --safe --yes"
+  },"now": {
+    "name": "horse-bot",
+    "alias": "horse.matteobot.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badass_toast/beer-bot.git"
+  },
+  "author": "Matteo Piatti",
+  "license": "MIT",
+  "dependencies": {
+    "botkit": "^0.5.5",
+    "brewerydb-node": "0.0.1",
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1"
+  }
+}
