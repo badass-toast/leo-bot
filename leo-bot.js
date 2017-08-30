@@ -126,3 +126,27 @@ controller.on('rtm_close',function(bot) {
 controller.hears('stop dude!!','direct_message',function(bot,message) {
   bot.rtm.close();
 });
+
+
+
+var spruch = [
+  "Wieso funktioniert das nöd ihr wixxers?",
+  "Ihr sind doch alles Höde!",
+  "Ich bi din Chef du huere wixxer",
+  "Ihr huere Höde",
+  "Ihr sind doch alles wixxers",
+  "Huere bullshit",
+  "Niete ohni Chopf",
+  "Huere stift",
+  "Ihr sind scho huere luschtigi",
+  "Booooooooooooris",
+  "Gits eh Zigi?",
+  "Ich gang jetzt eis go Vape",
+  "Würkli?"
+];
+
+controller.hears(['stadler', 'patrick', 'chef', 'ceo', 'wixxer', 'wixer', 'höde', 'hode', 'stift'], ['ambient,message_received'], function(bot, message) {
+
+  var reply = spruch[Math.floor(Math.random()*spruch.length)]
+  bot.reply(message, '*de Chef seit:* ' + reply);
+});
