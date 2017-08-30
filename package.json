@@ -1,14 +1,14 @@
 {
-  "name": "movie-bot",
+  "name": "leo-bot",
   "version": "1.0.0",
   "description": "A movie bot",
   "main": "index.js",
   "scripts": {
-    "start": "node horse-bot.js",
+    "start": "node leo-bot.js",
     "deploy": "now -e Client_ID=@id -e Client_Secret=@secret -e Verification_Token=@token -e PORT=@port && now alias && now rm horse-bot --safe --yes"
   },"now": {
-    "name": "horse-bot",
-    "alias": "horse.matteobot.com"
+    "name": "leo-bot",
+    "alias": "leo.matteobot.com"
   },
   "repository": {
     "type": "git",
