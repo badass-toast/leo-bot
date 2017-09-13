@@ -81,7 +81,7 @@ controller.hears(['unicorn', 'einhorn'], ['ambient,message_received'], function(
     if (!error && response.statusCode === 200) {
       var stringify = JSON.stringify(body);
       var GIF = body.data.image_original_url;
-      bot.reply(message, 'Here is your random gif, FABULOUS edition:smile: ' +GIF+ '');
+      bot.reply(message, 'Here is your random gif, FABULOUS edition:smile: ' +GIF+ '', icon_emoji=':some_emoji_in_slack:');
     } else {
       bot.reply(message, 'There was a problem with the API. Sorry:cry: no Gif right now');
     }
@@ -142,11 +142,34 @@ var spruch = [
   "Booooooooooooris",
   "Gits eh Zigi?",
   "Ich gang jetzt eis go Vape",
-  "Würkli?"
+  "Würkli?",
+  "Aaah maxl!"
 ];
+
+var url = [
+  "https://www.youtube.com/watch?v=4gSOMba1UdM",
+  "https://www.youtube.com/watch?v=BX7Ar3Z-oTo",
+  "https://www.youtube.com/watch?v=Q3E7L_RoyTU",
+  "https://www.youtube.com/watch?v=6ua6OahzdwQ",
+  "https://www.youtube.com/watch?v=6GBathdMJ3M",
+  "https://www.youtube.com/watch?v=my42f60JTTo",
+  "https://www.youtube.com/watch?v=0rsu2pk5UvU",
+  "https://www.youtube.com/watch?v=oxxgzQbtKMg",
+  "https://www.youtube.com/watch?v=Saepkl7c84A",
+  "https://www.youtube.com/watch?v=stlZEKoJg10",
+  "https://www.youtube.com/watch?v=TX-6qPppbjY",
+  "https://www.youtube.com/watch?v=GW--4j1vkEw",
+  "https://www.youtube.com/watch?v=n-02t7pAS4Y"
+]
 
 controller.hears(['stadler', 'patrick', 'chef', 'ceo', 'wixxer', 'wixer', 'höde', 'hode', 'stift'], ['ambient,message_received'], function(bot, message) {
 
   var reply = spruch[Math.floor(Math.random()*spruch.length)]
   bot.reply(message, '*de Chef seit:* ' + reply);
+});
+
+controller.hears(['earrape', 'ohrechräbs', 'earcancer'], ['ambient,message_received'], function(bot, message) {
+
+  var reply = spruch[Math.floor(Math.random()*url_ear.length)]
+  bot.reply(message, 'Ich glaub du meinsch das:' + reply);
 });
