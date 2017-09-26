@@ -143,7 +143,23 @@ var spruch = [
   "Gits eh Zigi?",
   "Ich gang jetzt eis go Vape",
   "Würkli?",
-  "Aaah maxl!"
+  "Aaah maxl!",
+  "Die beschte Herdöpfel gits bim Nachbuur",
+  "Langsam chummi dere Sach da nächer",
+  "Shett Lohn geh, huere guet! Jetzt chani mir wieder zmittag chaufe!",
+  "Verstasc wasi meine?",
+  "Womer grad bim Thema sind, gömmer eis go rauche?",
+  "Du hesch guet lache du hode",
+  "Das hesch jetzt devo du hode",
+  "Das isch de reinschti huere Fick",
+  "Nei ohni scheiss, isch etzt weniger luschtig",
+  "Chumme nöd drus!",
+  "Wieso Gras?",
+  "Dini Mueter chunnt nöd drus",
+  "Was isch los?",
+  "Du bisch scho en huere banaus, ha dir das schomal gseit?",
+  "Oh Boris, wenn du wüsstisch",
+  "Wenn du wüsstisch du huere hode"
 ];
 
 var url = [
