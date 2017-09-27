@@ -159,7 +159,9 @@ var spruch = [
   "Was isch los?",
   "Du bisch scho en huere banaus, ha dir das schomal gseit?",
   "Oh Boris, wenn du wüsstisch",
-  "Wenn du wüsstisch du huere hode"
+  "Wenn du wüsstisch du huere hode",
+  "Stadler muess jetzt gah trolololololoooo",
+  ""
 ];
 
 var url = [
