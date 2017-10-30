@@ -72,26 +72,6 @@ controller.hears(['bojack'], ['ambient,message_received'], function(bot, message
   });
 });
 
-controller.hears(['unicorn', 'einhorn'], ['ambient,message_received'], function(bot, message) {
-  var request = require("request");
-  var url = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=unicorn";
-
-  request({ url: url, json: true }, function (error, response, body) {
-
-    if (!error && response.statusCode === 200) {
-      var stringify = JSON.stringify(body);
-      var GIF = body.data.image_original_url;
-      bot.reply(message, 'Here is your random gif, FABULOUS edition:smile: ' +GIF+ '', icon_emoji=':some_emoji_in_slack:');
-    } else {
-      bot.reply(message, 'There was a problem with the API. Sorry:cry: no Gif right now');
-    }
-  });
-});
-
-
-
-
-
 controller.on('create_bot',function(bot,config) {
 
   if (_bots[bot.config.token]) {
@@ -160,11 +140,30 @@ var spruch = [
   "Du bisch scho en huere banaus, ha dir das schomal gseit?",
   "Oh Boris, wenn du wüsstisch",
   "Wenn du wüsstisch du huere hode",
-  "Stadler muess jetzt gah trolololololoooo",
-  ""
+  ":notes:Stadler muess jetzt gah trolololololoooo:notes:",
+  "Moll, ich bin de chef du wixxer",
+  "Machs doch selber",
+  "Wieso machts etz das nöd sälber? Huere manuelli Scheisse da",
+  "Ficked eu ihr wixxer",
+  "Nei aber für so öppis wirdi nöd zahlt... Isch doch truurig",
+  "Ich los jetzt musig, denn mussi nöd vo eu Höde lose",
+  "Hey wenn ich dich mal wieder so gseh weissi grad wieder warums Mensche git wo fertig sind mit de Menschheit",
+  "Ihr chönnd mir all ade chlööte hange ihr Volldeppe",
+  "You fancy mofos",
+  "Sache gits die gits gar nöd",
+  "Das macht mich grad e chli grantig",
+  "Easy Hitler...",
+  "Also merci, figgdi",
+  "Figgdi, isch guet hemmer en deal?",
+  "HÄMMER EN DEAL?",
+  "Jatzt wäri fascht hässig worde",
+  "Dini Müetere, dini Müetere",
+  "Nananana-na Führer!",
+  "Hey, I do what I want",
+  "Ich glaub mir hetted eus jetzt würklich euses Bier verdient"
 ];
 
-var url = [
+var url_ear = [
   "https://www.youtube.com/watch?v=4gSOMba1UdM",
   "https://www.youtube.com/watch?v=BX7Ar3Z-oTo",
   "https://www.youtube.com/watch?v=Q3E7L_RoyTU",
@@ -180,7 +179,7 @@ var url = [
   "https://www.youtube.com/watch?v=n-02t7pAS4Y"
 ]
 
-controller.hears(['stadler', 'patrick', 'chef', 'ceo', 'wixxer', 'wixer', 'höde', 'hode', 'stift'], ['ambient,message_received'], function(bot, message) {
+controller.hears(['stadler', 'patrick', 'chef', 'ceo', 'wixxer', 'wixer', 'höde', 'hode', 'stift', 'huere scheiss'], ['ambient,message_received'], function(bot, message) {
 
   var reply = spruch[Math.floor(Math.random()*spruch.length)]
   bot.reply(message, '*de Chef seit:* ' + reply);
@@ -191,3 +190,17 @@ controller.hears(['earrape', 'ohrechräbs', 'earcancer'], ['ambient,message_rece
   var reply = spruch[Math.floor(Math.random()*url_ear.length)]
   bot.reply(message, 'Ich glaub du meinsch das:' + reply);
 });
+
+controller.hears(['danke leo'], ['ambient,message_received'], function(bot, message) {
+  bot.reply(message, 'Bitte gerngscheh;)');
+});
+
+
+  function square(num) {
+    return num * num;
+  }
+
+      square(12);
+
+
+  console.log(12);
