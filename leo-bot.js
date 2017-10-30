@@ -195,6 +195,9 @@ controller.hears(['danke leo'], ['ambient,message_received'], function(bot, mess
   bot.reply(message, 'Bitte gerngscheh;)');
 });
 
+controller.hears(['scheiss bot'], ['ambient,message_received'], function(bot, message) {
+  bot.reply(message, 'Fick dich au...');
+});
 
   function square(num) {
     return num * num;
